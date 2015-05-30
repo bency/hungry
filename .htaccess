@@ -1,0 +1,16 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !.php
+RewriteRule ^setmenu/?$ index.php?id=22
+RewriteRule ^setmenu/([0-9]+)/?$ index.php?id=22&edit=$1
+RewriteRule ^setmenu/([0-9]+)/([0-9]+)/?$ index.php?id=22&edit=$1&page=$2
+RewriteRule ^setstore/?$ index.php?id=21
+RewriteRule ^setstore/([0-9]+)/?$ index.php?id=21&sid=$1
+RewriteRule ^showstore/?$ index.php?id=11
+RewriteRule ^showmenu/([0-9]+)/?$ index.php?id=12&sid=$1
+RewriteRule ^showmenu/([0-9]+)/([0-9]+)/?$ index.php?id=12&sid=$1&page=$2
+RewriteRule ^showstore/([0-9]+)/?$ index.php?id=11&edit=$1
+RewriteRule ^showstore/([0-9]+)/([0-9]+)/?$ index.php?id=11&edit=$1&page=$2
+RewriteRule ^editstore/?$ index.php?id=23
+RewriteRule ^status/?$ index.php?id=31
+RewriteRule ^status/([a-z]+)/?$ index.php?id=31&op=$1
+RewriteRule ^status/([a-z]+)/([a-z0-9.]+)?$ index.php?id=31&op=$1&ip=$2
