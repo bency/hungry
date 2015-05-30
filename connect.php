@@ -1,5 +1,10 @@
 <?php
-$link = mysql_connect('127.0.0.1','root','ddyoinejjmj');
+$setting_file = __DIR__ . "/config.ini";
+$setting = parse_ini_file($setting_file);
+$host = $setting['host'];
+$username = $setting['username'];
+$password = $setting['password'];
+$link = mysql_connect($host, $username, $password);
 if(!$link){
 	die('連線失敗'.mysql_error());
 }
